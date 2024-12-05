@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  display: grid;
+  height: auto;
+  gap: 0px;
+  width: 100%;
+  margin: auto;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* Navigation Section */
+
+.navigation {
+  padding: 20px;
+  background-color: #191125;
+  color: white;
+}
+
+/*did not get this to work, trying to bold "Inbox (4)" */
+div .navlinks .mainnavigation {
+  font-weight: 700 !important;
+}
+
+nav h1 {
+  font-size: 1.5em;
+}
+
+nav .compose {
+  display: block;
+  margin: 15px 0;
+  padding: 10px 15px;
+  background-color: #8052E0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+}
+
+nav .compose:hover {
+  background-color: #B593FA;
+}
+
+nav .navlinks li {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #34495e;
+}
+
+nav .navlinks li:last-child {
+  border-bottom: none;
+}
+
+/* Inbox Section */
+
+.inbox {
+  padding: 20px;
+  background-color: #3d1c6a;
+  overflow-y: auto;
+}
+
+.searchbox {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+}
+
+
+.inbox .message1 {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #947ADB;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inbox .message2, .inbox .message3, .inbox .message4 {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inbox div:hover {
+  background-color: #C8BCE7;
+}
+
+
+/* Email Section */
+.email {
+  padding: 20px;
+  background-image: radial-gradient(circle, #ff69b4 0%, #6495ed 100%);
+  overflow-y: auto;
+}
+
+.email p {
+  margin: 10px 0;
+}
+
+.email .emailcard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #7f8c8d;
+  border-radius: 5px;
+}
+
+.send {
+  padding: 10px 20px;
+  background-color: #8052E0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  width: 15rem;
+}
+
+.send:hover {
+  background-color: #B593FA;
+}
+
+/* Email Card */
+
+.cardwindow {
+  max-width: auto;
+  height: auto;
+  padding: 35px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, .45);
+  border-radius: 55px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+  backdrop-filter: blur(15px);
+  margin: 0px 25px;
+}
+
+/* Desktop Layout */
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-rows: 1fr; 
+    grid-template-columns: 1fr 2fr 3fr;
+    height: 100vh;
+  }
+
+  .navigation {
+    grid-column: 1;
+  }
+
+  .inbox {
+    grid-column: 2;
+  }
+
+  .email {
+    grid-column: 3;
+  }
+} 
